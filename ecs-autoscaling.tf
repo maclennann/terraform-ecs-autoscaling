@@ -20,4 +20,10 @@ resource "aws_autoscaling_group" "ecs-cluster" {
     value =  "ECS ${var.cluster_name}"
     propagate_at_launch = true
   }
+
+  tag {
+    key = "Team"
+    value = "${var.team_name}"
+    propagate_at_launch = true
+  }
 }
