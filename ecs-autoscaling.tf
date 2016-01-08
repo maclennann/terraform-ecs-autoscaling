@@ -9,6 +9,10 @@ resource "aws_autoscaling_group" "ecs-cluster" {
   launch_configuration = "${aws_launch_configuration.ecs.name}"
   health_check_grace_period = "${var.health_check_grace_period}"
 
+  lifecycle {
+    create_before_destroy = true
+  }
+
   tag {
     key = "Env"
     value = "${var.environment_name}"

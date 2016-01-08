@@ -4,7 +4,7 @@ variable "cluster_name" {
 
 variable "ami" {
   /* us-east-1, version 2015.03.d */
-  default = "ami-e1c33f8a"
+  default = "ami-6ff4bd05"
   description = "AMI id to launch, must be in the region specified by the region variable"
 }
 
